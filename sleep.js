@@ -9,13 +9,15 @@ const exec = require('child_process').execSync;
  * @param func
  * @private
  */
-const _sleep = (time, func = 'sleep') => (
+const _sleep =
+    (time, func = 'sleep') => (
 	(time = parseInt(time)),
 	(time > 0
 		? exec(`${func} ${time}`)
 		: null
 	)
-);
+    )
+;
 
 /**
  *
@@ -42,6 +44,6 @@ module.exports.usleep = microSeconds => _sleep(microSeconds, 'usleep');
  * @param miliSeconds
  * @returns {"ok" | "not-equal" | "timed-out"}
  */
-module.exports.msleep = miliSeconds => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, miliSeconds);
+module.exports.msleep = milliSeconds => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliSeconds);
 
 //EOF//
