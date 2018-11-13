@@ -21,7 +21,7 @@ for (let i=0; i<10; i++) {
 
 ```
 
-### Sleep process for miliseconds
+### Sleep process for milliseconds
 ```js
 const sleep = require('./sleep').msleep;
 
