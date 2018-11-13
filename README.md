@@ -11,7 +11,7 @@ Mainly useful for debugging.
 ## Usage
 
 ### Sleep process for seconds
-```
+```js
 const sleep = require('./sleep').sleep;
 
 for (let i=0; i<10; i++) {
@@ -22,7 +22,7 @@ for (let i=0; i<10; i++) {
 ```
 
 ### Sleep process for miliseconds
-```
+```js
 const sleep = require('./sleep').msleep;
 
 // Sleep 1000ms = 1s
@@ -33,7 +33,7 @@ for (let i=0; i<10; i++) {
 ```
 
 ### Sleep process for microseconds
-```
+```js
 const sleep = require('./sleep').usleep;
 
 // Sleep 1000000ms = 1s
