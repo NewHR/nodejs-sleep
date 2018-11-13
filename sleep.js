@@ -11,7 +11,6 @@ const exec = require('child_process').execSync;
  */
 const _sleep = (time, func = 'sleep') => (
 	(time = parseInt(time)),
-	(console.log(`${func} ${time}`)),
 	(time > 0
 		? exec(`${func} ${time}`)
 		: null
