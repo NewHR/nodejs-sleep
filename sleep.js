@@ -46,4 +46,16 @@ module.exports.usleep = microSeconds => _sleep(microSeconds, 'usleep');
  */
 module.exports.msleep = milliSeconds => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliSeconds);
 
+
+/**
+ *
+ * @param milliSeconds
+ * @returns {Promise<any>}
+ * Usage:
+ *
+ *    await delay(1000)
+ *
+ */
+module.exports.delay = milliSeconds => new Promise(resolve => setTimeout(_=>resolve(), milliSeconds));
+
 //EOF//
