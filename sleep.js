@@ -13,8 +13,8 @@ const _sleep = (time, func = 'sleep') => (
 	(time = parseInt(time)),
 	(console.log(`${func} ${time}`)),
 	(time > 0
-			? exec(`${func} ${time}`)
-			: null
+		? exec(`${func} ${time}`)
+		: null
 	)
 );
 
